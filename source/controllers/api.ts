@@ -8,24 +8,6 @@ import { Request, Response, NextFunction } from 'express';
 import axios from "axios";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-/**
- * Airdrop controller function
- * @param {Request} req - Express request object
- * @param {Response} res - Express response object
- * @param {NextFunction} next - Express next middleware function
- * @returns {Promise<Response>} JSON response with status and data
- */
-const airdrop = async (req: Request, res: Response, next: NextFunction) => {
-  try {
-    // Currently, this function doesn't perform any specific airdrop operation
-    // It just returns a success response with an empty data object
-    return res.status(200).json({ status: "ok", data: {} });
-  } catch (error: any) {
-    // If an error occurs, return a 401 status with the error message
-    return res.status(401).json({ error: error.toString() });
-  }
-};
-
 // Task list data
 const TASK_LIST = [
   "生成会议纪要",
@@ -110,4 +92,4 @@ export const processTask = async (req: Request, res: Response) => {
 };
 
 // Export the airdrop function as the default export
-export default { airdrop, getTasks, processTask };
+export default { getTasks, processTask };

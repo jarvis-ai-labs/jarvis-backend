@@ -15,10 +15,6 @@ import controller from "../controllers/api";
 // Create a new router instance
 const router = express.Router();
 
-// Define a GET route for the airdrop endpoint
-// When a GET request is made to '/airdrop', it will be handled by the airdrop function in the controller
-router.get('/airdrop', controller.airdrop);
-
 // Add new routes
 router.get('/tasks', controller.getTasks);
 router.post('/process-task', controller.processTask);
