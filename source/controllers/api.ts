@@ -75,7 +75,7 @@ export const getTasks = (req: Request, res: Response) => {
     data: TASK_LIST.map((task, index) => ({
       id: index + 1,
       name: task,
-      description: PROMPT_MAP[task]?.split("：")[0] || ""
+      description: PROMPT_MAP[task] || ""
     }))
   });
 };
