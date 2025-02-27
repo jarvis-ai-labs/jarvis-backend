@@ -19,5 +19,9 @@ const router = express.Router();
 // When a GET request is made to '/airdrop', it will be handled by the airdrop function in the controller
 router.get('/airdrop', controller.airdrop);
 
+// Add new routes
+router.get('/tasks', controller.getTasks);
+router.post('/process-task', controller.processTask);
+
 // Export the router to be used in other parts of the application
 export = router;

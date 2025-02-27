@@ -56,7 +56,7 @@ router.use((req, res, next) => {
 const httpServer = http.createServer(router);
 
 // Set the port for the server to listen on
-const PORT: any = process.env.PORT ?? 4003;
+const PORT: any = process.env.PORT ?? 4004;
 
 // Start the server
 httpServer.listen(PORT, () =>
